@@ -12,121 +12,124 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 main {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  background-color: aquamarine;
 }
-main nav {
-  height: 15%;
+main section.view1 {
   width: 100%;
+  height: 100vw;
+  background-color: black;
+}
+main section.view1 .navbar {
+  width: 100%;
+  height: 8vh;
   background-color: #bc032d;
   display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.781);
 }
-main nav .img-logo {
+main section.view1 .navbar .logo {
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
-main nav .img-logo img {
-  height: 50%;
-  margin-left: 10px;
+main section.view1 .navbar .logo img {
+  padding-left: 30px;
+  height: 45%;
 }
-main nav .icons {
-  height: 100%;
+main section.view1 .navbar .menu-cart {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 10px;
 }
-main nav .icons .cart {
-  height: 70%;
+main section.view1 .navbar .menu-cart .cart {
   width: 20%;
+  height: 50%;
   background-color: #fff;
-  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.3rem;
+  border-radius: 10px;
 }
-main nav .icons .cart i {
-  font-size: 26px;
-}
-main nav .icons .menu-icon {
-  height: 100%;
-  width: 30%;
+main section.view1 .navbar .menu-cart .menu {
+  width: 20%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-main nav .icons .menu-icon i {
+  font-size: 1.3rem;
+  font-weight: 800;
   color: white;
-  font-size: 28px;
 }
-main .view1 {
-  border-top: 1px solid rgb(143, 142, 142);
-  width: 100%;
-  height: 90%;
+main section.view1 .hero-section {
+  height: 100vw;
   background-color: #bc032d;
+}
+main section.view1 .hero-section .title {
+  background-color: #bc032d;
+  text-align: center;
+  font-family: bold;
+  color: white;
+}
+main section.view1 .hero-section .visuals {
+  height: 75vw;
+  background-color: #bc032d;
+  position: relative;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+}
+main section.view1 .hero-section .visuals .line {
+  width: 100%;
+}
+main section.view1 .hero-section .visuals .water {
+  height: 100%;
+  position: absolute;
+}
+main section.view1 .hero-section .visuals .canP {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
-main .view1 .title {
-  height: 25%;
-  width: 80%;
-  font-family: bold;
-  text-align: center;
-  color: white;
-}
-main .view1 .title .title1 {
-  margin-top: 10px;
-}
-main .view1 .cane-img {
-  height: 75%;
+main section.view1 .hero-section .visuals .canP .can {
   width: 100%;
-  position: relative;
-}
-main .view1 .cane-img .cane {
   height: 100%;
-  width: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: end;
-  top: 10%;
 }
-main .view1 .cane-img .cane .cane, main .view1 .cane-img .cane img {
-  z-index: 1;
-  height: 50%;
+main section.view1 .hero-section .visuals .canP .can .cc {
+  height: 55%;
 }
-main .view1 .cane-img .cane #can1 {
+main section.view1 .hero-section .visuals .canP .can .can1 {
+  position: absolute;
+  right: 52%;
+  bottom: -20px;
   transform: rotate(-20deg);
 }
-main .view1 .cane-img .cane #can2 {
+main section.view1 .hero-section .visuals .canP .can .can2 {
+  position: absolute;
+  left: 52%;
+  bottom: -20px;
   transform: rotate(20deg);
 }
-main .view1 .cane-img #water {
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-main .view1 .cane-img #line {
-  width: 100vw;
-  top: 55%;
-  z-index: 0;
-  position: absolute;
-}
-main .view2 {
-  width: 100%;
-  height: 100%;
-  background-color: #962bfa;
+main section.view2 {
+  height: 100vw;
+  background-color: #000000;
 }/*# sourceMappingURL=style.css.map */

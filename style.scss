@@ -1,151 +1,155 @@
 @font-face {
-    font-family: bold;
-    src: url(/fonts/bold.woff2);
+  font-family: bold;
+  src: url(/fonts/bold.woff2);
 }
 @font-face {
-    font-family: regular;
-    src: url(/fonts/regular.woff2);
+  font-family: regular;
+  src: url(/fonts/regular.woff2);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-html, body{
-    height: 100%;
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+
+  section.view1 {
     width: 100%;
-}
+    height: 100vw;
+    background-color: black;
 
-main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    .navbar {
+      width: 100%;
+      height: 8vh;
+      background-color: #bc032d;
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.781);
 
-    nav{
-        height: 15%;
-        width: 100%;
-        background-color: #bc032d;
-        display: flex;
-        justify-content: space-between;
-
-        
-        .img-logo{
-            width: 50%;
-            display: flex;
-            align-items: center;
-
-            img{
-                height: 50%;
-                margin-left: 10px;
-            }
-        }
-
-        .icons{
-            height: 100%;
-            width: 50%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-
-            .cart{
-                height: 70%;
-                width: 20%;
-                background-color: #fff;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                i{
-                    font-size: 26px;
-                }
-            }
-            .menu-icon{
-                height: 100%;
-                width: 30%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                i{
-                    color: white;
-                    font-size: 28px;
-                }
-            }
-        }
-    }
-    .view1{
-        border-top: 1px solid rgb(143, 142, 142);
-        width: 100%;
-        height: 90%;
-        background-color: #bc032d;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-        
-
-        .title{
-            height: 25%;
-            width: 80%;
-            // background-color: #2bfa58;
-            font-family: bold;
-            text-align: center;
-            color: white;
-
-            .title1{
-                margin-top: 10px;
-            }
-
-
-
-        }
-        .cane-img{
-            height: 75%;
-            width: 100%;
-            position: relative;
-
-            .cane{
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: end;
-                top: 10%;
-
-                .cane, img{
-                    z-index: 1;
-                    height: 50%;
-                }
-                #can1{
-                    transform: rotate(-20deg);
-                }
-                #can2{
-                    transform: rotate(20deg);
-                }
-                 }
-                #water{
-                    z-index: 0;
-                    height: 100%;
-                    width: 100%;
-                    position: absolute;
-                }
-                #line{
-                    width: 100vw;
-                    top: 55%;
-                    z-index: 0;
-                    position: absolute;
-                }
-            
-        }
-
-    }
-    .view2{
-        width: 100%;
+      .logo {
+        width: 50%;
         height: 100%;
-        background-color: #962bfa;
+        // background-color: rgb(63, 38, 0);
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+
+        img {
+          padding-left: 30px;
+          height: 45%;
+        }
+      }
+      .menu-cart {
+        width: 50%;
+        height: 100%;
+        // background-color: blueviolet;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+
+        .cart {
+          width: 20%;
+          height: 50%;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.3rem;
+          border-radius: 10px;
+        }
+        .menu {
+          width: 20%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.3rem;
+          font-weight: 800;
+          color: white;
+        }
+      }
     }
+
+    .hero-section {
+      height: 100vw;
+      background-color: #bc032d;
+
+      .title {
+        // height: 25%;
+        background-color: #bc032d;
+        text-align: center;
+        font-family: bold;
+        color: white;
+      }
+      .visuals {
+        height: 75vw;
+        background-color: #bc032d;
+        position: relative;
+        display: flex;
+
+        .line {
+          width: 100%;
+        }
+        .water {
+          height: 100%;
+          position: absolute;
+        }
+        .canP {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          // background-color: #bc032d;
+          overflow: hidden;
+
+          .can {
+            width: 100%;
+            height: 100%;
+            // background-color: #012c18;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            .cc {
+              height: 55%;
+            }
+
+            .can1 {
+              position: absolute;
+              right: 52%;
+              bottom: -20px;
+              transform: rotate(-20deg);
+            }
+            .can2 {
+              position: absolute;
+              left: 52%;
+              bottom: -20px;
+              transform: rotate(20deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  section.view2 {
+    height: 100vw;
+    background-color: #000000;
+  }
 }
