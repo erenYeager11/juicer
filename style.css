@@ -30,24 +30,33 @@ nav {
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.274);
 }
-
-.logo > img {
+nav .logo > img {
   width: 80%;
 }
-
-.menu-cart {
+nav .menu-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
-.menu-cart .cart {
+nav .menu-cart .links {
+  display: none;
+}
+nav .menu-cart .links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-family: bold;
+  font-weight: 500;
+  color: white;
+}
+nav .menu-cart .cart {
   border-radius: 12px;
   font-size: 1.3rem;
   padding: 8px;
   background-color: #fff;
 }
-.menu-cart .menu {
+nav .menu-cart .menu {
   font-weight: 800;
   color: #fff;
   font-size: 1.5rem;
@@ -67,6 +76,7 @@ section.hero .title {
   text-align: center;
 }
 section.hero .title h1 {
+  font-weight: 600;
   font-size: 2.5rem;
 }
 section.hero .overlays .overlay-images {
@@ -81,7 +91,7 @@ section.hero .overlays .can-Y {
 }
 section.hero .overlays .can-G {
   bottom: -8%;
-  left: 28%;
+  right: 50%;
   transform: translateX(-50%);
   transform: rotate(-20deg);
 }
@@ -256,6 +266,12 @@ section.products .cards .card5 .text5 {
 }
 
 @media (min-width: 770px) {
+  nav .menu-cart .links {
+    display: initial;
+  }
+  nav .menu-cart .menu {
+    display: none;
+  }
   section.hero {
     height: 75vh;
   }
@@ -265,13 +281,40 @@ section.products .cards .card5 .text5 {
   section.hero .title > h1 > span {
     color: #ffffff;
   }
+  section.hero .overlays .overlay-images {
+    height: 432px;
+  }
+  section.hero .overlays .water {
+    height: 100%;
+    top: 110px;
+  }
   section.products > .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1000px) {
   section.hero .title > h1 {
-    font-size: 8rem;
+    font-size: 6rem;
+  }
+  section.hero .title > h1 > span {
+    color: #ffffff;
+  }
+  section.hero .overlays > .overlay-images {
+    height: 516px;
+  }
+  section.hero .overlays .can-Y {
+    bottom: -12%;
+  }
+  section.hero .overlays .can-G {
+    bottom: -12%;
+  }
+  section.hero .overlays .line {
+    width: 100%;
+    top: 30%;
+  }
+  section.hero .overlays .water {
+    height: 100%;
+    top: 110px;
   }
   section.products > .cards {
     grid-template-columns: repeat(5, 1fr);
