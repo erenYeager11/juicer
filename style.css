@@ -14,7 +14,6 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
 }
 
@@ -22,114 +21,259 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-main {
+nav {
   width: 100%;
-  height: 100%;
-  background-color: aquamarine;
-}
-main section.view1 {
-  width: 100%;
-  height: 100vw;
-  background-color: black;
-}
-main section.view1 .navbar {
-  width: 100%;
-  height: 8vh;
+  padding: 20px;
   background-color: #bc032d;
   display: flex;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.781);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.274);
 }
-main section.view1 .navbar .logo {
-  width: 50%;
-  height: 100%;
+
+.logo > img {
+  width: 80%;
+}
+
+.menu-cart {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
-main section.view1 .navbar .logo img {
-  padding-left: 30px;
-  height: 45%;
-}
-main section.view1 .navbar .menu-cart {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 10px;
-}
-main section.view1 .navbar .menu-cart .cart {
-  width: 20%;
-  height: 50%;
+.menu-cart .cart {
+  border-radius: 12px;
+  font-size: 1.3rem;
+  padding: 8px;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  border-radius: 10px;
 }
-main section.view1 .navbar .menu-cart .menu {
-  width: 20%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
+.menu-cart .menu {
   font-weight: 800;
-  color: white;
+  color: #fff;
+  font-size: 1.5rem;
 }
-main section.view1 .hero-section {
-  height: 100vw;
+
+section.hero {
+  width: 100%;
+  height: 40vh;
   background-color: #bc032d;
-}
-main section.view1 .hero-section .title {
-  background-color: #bc032d;
-  text-align: center;
   font-family: bold;
   color: white;
-}
-main section.view1 .hero-section .visuals {
-  height: 75vw;
-  background-color: #bc032d;
   position: relative;
-  display: flex;
-}
-main section.view1 .hero-section .visuals .line {
-  width: 100%;
-}
-main section.view1 .hero-section .visuals .water {
-  height: 100%;
-  position: absolute;
-}
-main section.view1 .hero-section .visuals .canP {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
-main section.view1 .hero-section .visuals .canP .can {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+section.hero .title {
+  padding-top: 15px;
+  text-align: center;
 }
-main section.view1 .hero-section .visuals .canP .can .cc {
-  height: 55%;
+section.hero .title h1 {
+  font-size: 2.5rem;
 }
-main section.view1 .hero-section .visuals .canP .can .can1 {
+section.hero .overlays .overlay-images {
+  height: 170px;
   position: absolute;
-  right: 52%;
-  bottom: -20px;
-  transform: rotate(-20deg);
 }
-main section.view1 .hero-section .visuals .canP .can .can2 {
-  position: absolute;
-  left: 52%;
-  bottom: -20px;
+section.hero .overlays .can-Y {
+  bottom: -8%;
+  left: 50%;
+  transform: translateX(-50%);
   transform: rotate(20deg);
 }
-main section.view2 {
-  height: 100vw;
-  background-color: #000000;
+section.hero .overlays .can-G {
+  bottom: -8%;
+  left: 28%;
+  transform: translateX(-50%);
+  transform: rotate(-20deg);
+}
+section.hero .overlays .line {
+  width: 100%;
+  top: 50%;
+}
+section.hero .overlays .water {
+  height: 85%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.products {
+  height: 70vh;
+  width: 100%;
+  background-color: #fff3e8;
+  padding-top: 48px;
+}
+section.products .cards {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+section.products .cards .card {
+  height: 100%;
+  width: 100%;
+}
+section.products .cards .card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+section.products .cards .card1 .card-image1 {
+  padding: 20px;
+  height: 80%;
+  width: 90%;
+  background-image: url(https://cdn.prod.website-files.com/687b1e267be119aa2f7eade5/68b7c72bb51ce6bfa20b0800_product-category5-bg.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+section.products .cards .card1 .card-image1 img {
+  height: 100px;
+}
+section.products .cards .card1 .text1 {
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+section.products .cards .card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+section.products .cards .card2 .card-image2 {
+  padding: 20px;
+  height: 80%;
+  width: 90%;
+  background-image: url(https://cdn.prod.website-files.com/687b1e267be119aa2f7eade5/68b7c77e1f8816fc1fae5922_product-category4-bg.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+section.products .cards .card2 .card-image2 img {
+  height: 100px;
+}
+section.products .cards .card2 .text2 {
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+section.products .cards .card3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+section.products .cards .card3 .card-image3 {
+  padding: 20px;
+  height: 80%;
+  width: 90%;
+  background-image: url(https://cdn.prod.website-files.com/687b1e267be119aa2f7eade5/68a5b054748a32f45f0ad935_grapes_image.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+section.products .cards .card3 .card-image3 img {
+  height: 100px;
+}
+section.products .cards .card3 .text3 {
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+section.products .cards .card4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+section.products .cards .card4 .card-image4 {
+  padding: 20px;
+  height: 80%;
+  width: 90%;
+  background-image: url(https://cdn.prod.website-files.com/687b1e267be119aa2f7eade5/68b7c71223b7f3f89aefa218_product-category3-bg.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+section.products .cards .card4 .card-image4 img {
+  height: 100px;
+}
+section.products .cards .card4 .text4 {
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+section.products .cards .card5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+section.products .cards .card5 .card-image5 {
+  padding: 20px;
+  height: 80%;
+  width: 90%;
+  background-image: url(https://cdn.prod.website-files.com/687b1e267be119aa2f7eade5/68b7c4e19ff7f2820991e1d1_product-category1-bg.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+section.products .cards .card5 .card-image5 img {
+  height: 100px;
+}
+section.products .cards .card5 .text5 {
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 770px) {
+  section.hero {
+    height: 75vh;
+  }
+  section.hero .title > h1 {
+    font-size: 4rem;
+  }
+  section.hero .title > h1 > span {
+    color: #ffffff;
+  }
+  section.products > .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  section.hero .title > h1 {
+    font-size: 8rem;
+  }
+  section.products > .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
