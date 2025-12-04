@@ -31,13 +31,15 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.274);
 }
 nav .logo > img {
+  position: relative;
   width: 80%;
 }
 nav .menu-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 15px;
+  position: relative;
 }
 nav .menu-cart .links {
   display: none;
@@ -55,6 +57,15 @@ nav .menu-cart .cart {
   font-size: 1.3rem;
   padding: 8px;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+nav .menu-cart .cart p {
+  font-family: bold;
+  font-weight: 400;
+  display: none;
 }
 nav .menu-cart .menu {
   font-weight: 800;
@@ -266,7 +277,24 @@ section.products .cards .card5 .text5 {
 }
 
 @media (min-width: 770px) {
+  nav .logo > img {
+    left: 30px;
+  }
+  nav .menu-cart {
+    right: 30px;
+  }
   nav .menu-cart .links {
+    display: initial;
+  }
+  nav .menu-cart .cart {
+    border-radius: 20px;
+    font-size: 1.3rem;
+    padding: 8px;
+    background-color: #fff;
+  }
+  nav .menu-cart .cart p {
+    font-family: bold;
+    font-weight: 400;
     display: initial;
   }
   nav .menu-cart .menu {
@@ -288,11 +316,35 @@ section.products .cards .card5 .text5 {
     height: 100%;
     top: 110px;
   }
+  section.products .cards .card1 .card-image1 img {
+    height: 160px;
+  }
+  section.products .cards .card2 .card-image2 img {
+    height: 160px;
+  }
+  section.products .cards .card3 .card-image3 img {
+    height: 160px;
+  }
+  section.products .cards .card4 .card-image4 img {
+    height: 160px;
+  }
+  section.products .cards .card5 .card-image5 img {
+    height: 160px;
+  }
   section.products > .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1000px) {
+  nav .logo > img {
+    left: 80px;
+  }
+  nav .menu-cart {
+    right: 80px;
+  }
+  nav .menu-cart .links ul {
+    font-size: 1.3rem;
+  }
   section.hero .title > h1 {
     font-size: 6rem;
   }
@@ -315,6 +367,64 @@ section.products .cards .card5 .text5 {
   section.hero .overlays .water {
     height: 100%;
     top: 110px;
+  }
+  section.products {
+    padding-top: 0px;
+  }
+  section.products .cards .card1 .card-image1 {
+    height: 60%;
+    width: 100%;
+  }
+  section.products .cards .card1 .card-image1 img {
+    height: 216px;
+  }
+  section.products .cards .card1 .text1 {
+    white-space: nowrap;
+    font-size: 1.6rem;
+  }
+  section.products .cards .card2 .card-image2 {
+    height: 60%;
+    width: 100%;
+  }
+  section.products .cards .card2 .card-image2 img {
+    height: 216px;
+  }
+  section.products .cards .card2 .text2 {
+    white-space: nowrap;
+    font-size: 1.6rem;
+  }
+  section.products .cards .card3 .card-image3 {
+    height: 60%;
+    width: 100%;
+  }
+  section.products .cards .card3 .card-image3 img {
+    height: 216px;
+  }
+  section.products .cards .card3 .text3 {
+    white-space: nowrap;
+    font-size: 1.6rem;
+  }
+  section.products .cards .card4 .card-image4 {
+    height: 60%;
+    width: 100%;
+  }
+  section.products .cards .card4 .card-image4 img {
+    height: 216px;
+  }
+  section.products .cards .card4 .text4 {
+    white-space: nowrap;
+    font-size: 1.6rem;
+  }
+  section.products .cards .card5 .card-image5 {
+    height: 60%;
+    width: 100%;
+  }
+  section.products .cards .card5 .card-image5 img {
+    height: 216px;
+  }
+  section.products .cards .card5 .text5 {
+    white-space: nowrap;
+    font-size: 1.6rem;
   }
   section.products > .cards {
     grid-template-columns: repeat(5, 1fr);

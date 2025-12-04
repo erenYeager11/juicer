@@ -37,7 +37,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+  
   .logo > img {
+    position: relative;
     width: 80%;
   }
 
@@ -45,11 +47,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 15px;
+    position: relative;
 
-    .links{
+    .links {
       display: none;
-      ul{
+
+      ul {
         list-style: none;
         display: flex;
         gap: 15px;
@@ -63,6 +67,16 @@ nav {
       font-size: 1.3rem;
       padding: 8px;
       background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      p{
+        font-family: bold;
+        font-weight: 400;
+        display: none;
+      }
     }
     .menu {
       font-weight: 800;
@@ -263,13 +277,25 @@ section.products {
 @media (min-width: 770px) {
   nav {
     .logo > img {
+      left: 30px;
     }
 
     .menu-cart {
-      .links{
-      display: initial;
-    }
+      right: 30px;
+      .links {
+        display: initial;
+      }
       .cart {
+        border-radius: 20px;
+        font-size: 1.3rem;
+        padding: 8px;
+        background-color: #fff;
+
+        p{
+        font-family: bold;
+        font-weight: 400;
+        display: initial;
+      }
       }
       .menu {
         display: none;
@@ -301,6 +327,58 @@ section.products {
     }
   }
   //---PRODUCT_SECTION_RESPONSIVE ---//
+  section.products {
+    .cards {
+      .card {
+      }
+
+      .card1 {
+        .card-image1 {
+          img {
+            height: 160px;
+          }
+        }
+        .text1 {
+        }
+      }
+      .card2 {
+        .card-image2 {
+          img {
+            height: 160px;
+          }
+        }
+        .text2 {
+        }
+      }
+      .card3 {
+        .card-image3 {
+          img {
+            height: 160px;
+          }
+        }
+        .text3 {
+        }
+      }
+      .card4 {
+        .card-image4 {
+          img {
+            height: 160px;
+          }
+        }
+        .text4 {
+        }
+      }
+      .card5 {
+        .card-image5 {
+          img {
+            height: 160px;
+          }
+        }
+        .text5 {
+        }
+      }
+    }
+  }
   section.products > .cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -308,6 +386,28 @@ section.products {
 
 // --- DESKTOP --- //
 @media (min-width: 1000px) {
+
+   nav {
+    .logo > img {
+      left: 80px;
+    }
+
+    .menu-cart {
+      right: 80px;
+      .links {
+        ul {
+        font-size: 1.3rem;
+      }
+      }
+      .cart {
+        p{
+      }
+      }
+      .menu {
+      }
+    }
+  }
+
   //---HERO_SECTION_RESPONSIVE ---//
   section.hero {
     .title > h1 {
@@ -339,6 +439,84 @@ section.products {
     }
   }
   //---PRODUCT_SECTION_RESPONSIVE ---//
+  section.products {
+    padding-top: 0px;
+    .cards {
+      .card {
+      }
+
+      .card1 {
+        .card-image1 {
+          height: 60%;
+          width: 100%;
+
+          img {
+            height: 216px;
+          }
+        }
+        .text1 {
+          white-space: nowrap;
+          font-size: 1.6rem;
+        }
+      }
+      .card2 {
+        .card-image2 {
+          height: 60%;
+          width: 100%;
+
+          img {
+            height: 216px;
+          }
+        }
+        .text2 {
+          white-space: nowrap;
+          font-size: 1.6rem;
+        }
+      }
+      .card3 {
+        .card-image3 {
+          height: 60%;
+          width: 100%;
+
+          img {
+            height: 216px;
+          }
+        }
+        .text3 {
+          white-space: nowrap;
+          font-size: 1.6rem;
+        }
+      }
+      .card4 {
+        .card-image4 {
+          height: 60%;
+          width: 100%;
+
+          img {
+            height: 216px;
+          }
+        }
+        .text4 {
+          white-space: nowrap;
+          font-size: 1.6rem;
+        }
+      }
+      .card5 {
+        .card-image5 {
+          height: 60%;
+          width: 100%;
+
+          img {
+            height: 216px;
+          }
+        }
+        .text5 {
+          white-space: nowrap;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
   section.products > .cards {
     grid-template-columns: repeat(5, 1fr);
   }
